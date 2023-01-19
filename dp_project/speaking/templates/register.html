@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block contentarea %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static './style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'boots_file/css/bootstrap.css' %}"/>
+
+    <title>REGISTRATION FORM</title>
+</head>
+<body>
+    <center>
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-120">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;color:teal">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                  
+    
+    <div>
+    
+    <form action="/register/" method="POST">
+       
+       <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+            
+        <input type="name" placeholder="Name" name="name" id="name" autocomplete="off">
+    </div>
+    </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-6 mb-4">
+        <div class="form-outline">
+    
+        <input type="email" placeholder="email" name="email">
+    </div>
+    </div>
+    </div>
+
+
+       <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+        <input type="number" name="contact" placeholder="Contact" id="contatct" maxlength="12">
+    </div>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+    
+        <input type="password" placeholder="password" name="password">
+    </div>
+    </div>
+    </div>
+    
+      <div class="row">
+        <div class="mt-4 pt-2 mb-3">
+            <div class="form-outline btn btn-primary">
+        <button>submit</button>
+    </div>
+    </div>
+    </div>
+    
+        <h1> {{ message }}</h1>
+    
+    </form>
+    </div>
+</center>
+
+    {% endblock %}
+
